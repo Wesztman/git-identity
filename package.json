@@ -1,62 +1,59 @@
 {
-	"name": "git-identity",
-	"displayName": "Git-Identity switcher",
-	"description": "Adds a button to easily switch between different Git authors",
-	"version": "1.0.1",
-	"license": "MIT",
-	"publisher": "stephtr",
-	"keywords": [
-		"Git",
-		"author",
-		"user",
-		"switch",
-		"identity"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/stephtr/git-identity"
-	},
-	"author": {
-		"name": "Stephan Troyer",
-		"url": "https://github.com/stephtr/git-identity"
-	},
-	"icon": "images/logo.png",
-	"engines": {
-		"vscode": "^1.35.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"workspaceContains:.git"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"title": "Git-Identity switcher configuration",
-			"properties": {
-				"git-identity.authors": {
-					"type": "array",
-					"default": [],
-					"description": "Available Git authors (each entry should be of the form 'John Doe john@doe.com')"
-				}
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "jest --config jest.json"
-	},
-	"devDependencies": {
-		"@types/jest": "^24.0.15",
-		"@types/node": "^10.12.21",
-		"jest": "^24.8.0",
-		"ts-jest": "^24.0.2",
-		"tslint": "^5.12.1",
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28"
-	}
-}
+    "name": "git-identity",
+    "displayName": "Git-Identity switcher",
+    "description": "Adds a button to easily switch between different Git authors",
+    "version": "1.0.1",
+    "license": "MIT",
+    "publisher": "stephtr",
+    "keywords": [
+      "Git",
+      "author",
+      "user",
+      "switch",
+      "identity"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/stephtr/git-identity"
+    },
+    "author": {
+      "name": "Stephan Troyer",
+      "url": "https://github.com/stephtr/git-identity"
+    },
+    "icon": "images/logo.png",
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "workspaceContains:.git"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "configuration": {
+        "title": "Git-Identity switcher configuration",
+        "properties": {
+          "git-identity.authors": {
+            "type": "array",
+            "default": [],
+            "description": "Available Git authors (each entry should be of the form 'John Doe john@doe.com')"
+          }
+        }
+      }
+    },
+    "scripts": {
+      "vscode:prepublish": "yarn run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "test": "jest --config jest.json"
+    },
+    "devDependencies": {
+      "@types/jest": "^24.0.15",
+      "@types/node": "^10.12.21",
+      "jest": "^24.8.0",
+      "ts-jest": "^24.0.2",
+      "tslint": "^5.12.1",
+      "typescript": "^3.3.1",
+      "@types/vscode": "^1.87.0",
+      "@vscode/test-electron": "^2.3.9"
+    }
+  }
